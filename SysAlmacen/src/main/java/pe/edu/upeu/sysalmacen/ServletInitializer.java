@@ -7,6 +7,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		//hola
 		return application.sources(SysAlmacenApplication.class);
 	}
 
