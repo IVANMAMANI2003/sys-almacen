@@ -24,6 +24,12 @@ public class MarcaController {
     private final MarcaMapper marcaMapper;
 
 
+    @GetMapping("/buscarmaxid")
+    public ResponseEntity<Long> getMarcaMaxId() {
+        Long idMax = marcaService.periodoIdMax();
+        return ResponseEntity.ok(idMax);
+    }
+
     @GetMapping
     public ResponseEntity<List<MarcaDTO>> findAll() {
         List<MarcaDTO> list = marcaMapper.toDTOs(marcaService.findAll());
